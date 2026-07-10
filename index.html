@@ -1,1 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soul Sessions – Walter Papai</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F7F4EF; --white: #FFFFFF; --dark: #1A2333;
+      --terra: #C4714A; --terra-light: #D4845D; --muted: #6B7280;
+      --border: rgba(26,35,51,0.1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Georgia', serif; background: var(--white); color: var(--dark); line-height: 1.6; }
 
+    nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0.75rem 3rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo img { height: 42px; width: auto; }
+    .nav-links { display: flex; gap: 1.6rem; list-style: none; }
+    .nav-links a { font-family: Arial, sans-serif; font-size: 0.82rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--terra); }
+    .nav-cta { background: var(--terra); color: white !important; padding: 0.45rem 1.1rem; border-radius: 4px; font-family: Arial, sans-serif; font-size: 0.82rem; text-decoration: none; }
+
+    .hero { min-height: 88vh; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
+    .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 6rem 4rem 6rem 6rem; }
+    .eyebrow { font-family: Arial, sans-serif; font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--terra); margin-bottom: 1.5rem; }
+    .hero h1 { font-size: clamp(2.6rem, 4vw, 3.8rem); line-height: 1.08; font-weight: normal; margin-bottom: 1.5rem; }
+    .hero h1 em { color: var(--terra); font-style: normal; }
+    .hero-sub { font-family: Arial, sans-serif; font-size: 1rem; color: var(--muted); line-height: 1.75; margin-bottom: 2.5rem; max-width: 400px; }
+    .btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn { padding: 0.8rem 1.8rem; border-radius: 4px; text-decoration: none; font-family: Arial, sans-serif; font-size: 0.87rem; transition: all 0.2s; display: inline-block; }
+    .btn-p { background: var(--terra); color: white; }
+    .btn-p:hover { background: var(--terra-light); }
+    .btn-g { border: 1px solid var(--border); color: var(--dark); }
+    .btn-g:hover { border-color: var(--terra); color: var(--terra); }
+    .hero-right { position: relative; overflow: hidden; }
+    .hero-right img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.88); }
+    .hero-fade { position: absolute; inset: 0; background: linear-gradient(to right, var(--white) 0%, transparent 20%); }
+
+    .collage-strip { width: 100%; overflow: hidden; max-height: 220px; }
+    .collage-strip img { width: 100%; height: 220px; object-fit: cover; object-position: center 30%; }
+
+    .angebote { padding: 6rem 3rem; background: var(--cream); }
+    .sec-label { font-family: Arial, sans-serif; font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.8rem; }
+    .sec-title { font-size: clamp(1.7rem, 2.5vw, 2.2rem); font-weight: normal; margin-bottom: 3.5rem; line-height: 1.2; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; max-width: 1100px; }
+    .card { background: var(--white); border-radius: 6px; padding: 2.5rem 2rem; border: 1px solid var(--border); display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.2s; }
+    .card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .card-label { font-family: Arial, sans-serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.8rem; }
+    .card h3 { font-size: 1.3rem; font-weight: normal; margin-bottom: 0.5rem; line-height: 1.2; }
+    .card-tag { font-family: Arial, sans-serif; font-size: 0.78rem; color: var(--terra); font-style: italic; margin-bottom: 1rem; }
+    .card p { font-family: Arial, sans-serif; font-size: 0.87rem; color: var(--muted); line-height: 1.7; flex: 1; margin-bottom: 1.8rem; }
+    .card-link { font-family: Arial, sans-serif; font-size: 0.82rem; color: var(--terra); text-decoration: none; border-bottom: 1px solid var(--terra); padding-bottom: 1px; width: fit-content; }
+
+    .feature { display: grid; grid-template-columns: 1fr 1fr; min-height: 540px; }
+    .feature-img { overflow: hidden; }
+    .feature-img img { width: 100%; height: 100%; object-fit: cover; }
+    .feature-text { padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center; }
+    .feature-text h2 { font-size: 1.9rem; font-weight: normal; margin-bottom: 1.5rem; line-height: 1.2; }
+    .feature-text p { font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+    .feat-list { list-style: none; margin: 1rem 0 2rem; }
+    .feat-list li { font-family: Arial, sans-serif; font-size: 0.87rem; color: var(--muted); padding: 0.35rem 0 0.35rem 1.2rem; position: relative; }
+    .feat-list li::before { content: '·'; position: absolute; left: 0; color: var(--terra); font-size: 1.2rem; line-height: 1; }
+
+    .mindcircle { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
+    .mc-text { padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center; background: var(--cream); }
+    .mc-text h2 { font-size: 1.9rem; font-weight: normal; margin-bottom: 1.5rem; line-height: 1.2; }
+    .mc-text p { font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+    .mc-img { overflow: hidden; }
+    .mc-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+
+    .box-teaser { display: grid; grid-template-columns: 1fr 1fr; min-height: 460px; }
+    .bt-text { background: var(--dark); color: white; padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center; }
+    .bt-text .sec-label { color: var(--terra); }
+    .bt-text h2 { font-size: 1.9rem; font-weight: normal; margin-bottom: 1.5rem; line-height: 1.2; }
+    .bt-text p { font-family: Arial, sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 2rem; }
+    .bt-img { overflow: hidden; }
+    .bt-img img { width: 100%; height: 100%; object-fit: cover; }
+
+    .ueber-wrap { padding: 6rem 3rem; background: var(--cream); }
+    .ueber { display: grid; grid-template-columns: 340px 1fr; gap: 5rem; max-width: 1000px; margin: 0 auto; align-items: center; }
+    .ueber-img { border-radius: 6px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+    .ueber-img img { width: 100%; display: block; }
+    .ueber-text h2 { font-size: 1.9rem; font-weight: normal; margin-bottom: 1.2rem; }
+    .ueber-text p { font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+    .quote { font-style: italic; font-size: 0.97rem; color: var(--dark) !important; border-left: 3px solid var(--terra); padding-left: 1rem; margin: 1.5rem 0 !important; }
+
+    .kontakt { padding: 5rem 3rem; text-align: center; }
+    .kontakt h2 { font-size: 2rem; font-weight: normal; margin-bottom: 0.5rem; }
+    .kontakt-sub { font-family: Arial, sans-serif; color: var(--muted); font-size: 0.92rem; margin-bottom: 2.5rem; }
+    .k-grid { display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; }
+    .k-item p:first-child { font-family: Arial, sans-serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.4rem; }
+    .k-item a, .k-item p:last-child { font-family: Arial, sans-serif; font-size: 0.92rem; color: var(--dark); text-decoration: none; }
+
+    footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 3rem; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+    .f-logo { height: 34px; filter: brightness(0) invert(1); opacity: 0.75; margin-bottom: 1rem; }
+    .f-brand p { font-family: Arial, sans-serif; font-size: 0.82rem; line-height: 1.7; }
+    .f-col h4 { font-family: Arial, sans-serif; font-size: 0.67rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 1rem; }
+    .f-col ul { list-style: none; }
+    .f-col ul li { margin-bottom: 0.5rem; }
+    .f-col ul li a { color: rgba(255,255,255,0.6); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.82rem; }
+    .f-col ul li a:hover { color: white; }
+    .f-bottom { background: var(--dark); border-top: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 3rem; font-family: Arial, sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.3); display: flex; justify-content: space-between; }
+    .f-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+
+    .legal { background: var(--dark); color: rgba(255,255,255,0.5); padding: 2rem 3rem; font-family: Arial, sans-serif; font-size: 0.78rem; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.05); }
+    .legal h3 { color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-bottom: 0.5rem; margin-top: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    @media (max-width: 900px) {
+      nav { padding: 0.75rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { min-height: 260px; }
+      .hero-left { padding: 4rem 2rem; }
+      .angebote { padding: 4rem 2rem; }
+      .cards { grid-template-columns: 1fr; }
+      .feature, .mindcircle, .box-teaser { grid-template-columns: 1fr; }
+      .feature-img, .mc-img, .bt-img { min-height: 260px; order: -1; }
+      .feature-text, .mc-text, .bt-text { padding: 3rem 2rem; }
+      .ueber-wrap { padding: 4rem 2rem; }
+      .ueber { grid-template-columns: 1fr; gap: 2.5rem; }
+      footer { grid-template-columns: 1fr; padding: 3rem 2rem; }
+      .f-bottom { padding: 1.2rem 2rem; flex-direction: column; gap: 0.5rem; }
+      .legal { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Soul Sessions"/></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#angebote">SoulSessions</a></li>
+    <li><a href="impulscafe.html">ImpulsCafé</a></li>
+    <li><a href="mindcircle.html">MindCircle</a></li>
+    <li><a href="https://walterpapai.github.io/rauchfrei-box/" target="_blank">Rauchfrei-Box</a></li>
+    <li><a href="ueber-mich.html">Über mich</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+  <a href="impulscafe.html" class="nav-cta">zum ImpulsCafé</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <p class="eyebrow">Soul Sessions · Walter Papai · Würzburg</p>
+    <h1>Wo Gespräche<br><em>bewegen</em></h1>
+    <p class="hero-sub">Echte Impulse für Herz, Verstand und Leben – professionell begleitet, aber ganz im echten Leben.</p>
+    <div class="btns">
+      <a href="impulscafe.html" class="btn btn-p">zum ImpulsCafé</a>
+      <a href="#angebote" class="btn btn-g">Alle Angebote</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="cafe-talk.jpg" alt="Menschen im Gespräch"/>
+    <div class="hero-fade"></div>
+  </div>
+</section>
+
+<div class="collage-strip">
+  <img src="collage.png" alt="ImpulsCafé Impressionen"/>
+</div>
+
+<section class="angebote" id="angebote">
+  <p class="sec-label">Was ich anbiete</p>
+  <h2 class="sec-title">Drei Wege – ein Ziel:<br>mehr Klarheit im Leben</h2>
+  <div class="cards">
+    <div class="card">
+      <p class="card-label">ImpulsCafé</p>
+      <h3>Café-Talks in deiner Stadt</h3>
+      <p class="card-tag">Dein Café für frischen Input.</p>
+      <p>Im ImpulsCafé triffst du Menschen die sich mehr Klarheit und neue Perspektiven wünschen – entspannt bei Kaffee oder einem Drink. Du kannst zuhören, dich einbringen oder ein eigenes Thema mitbringen. Alles darf, nichts muss.</p>
+      <a href="impulscafe.html" class="card-link">Termine und Orte →</a>
+    </div>
+    <div class="card">
+      <p class="card-label">MindCircle</p>
+      <h3>Tiefer gehen wenn du bereit bist</h3>
+      <p class="card-tag">Wo Gespräche Wege eröffnen.</p>
+      <p>Der MindCircle ist dein Raum für Fokus und Entwicklung. In kleinen Gruppen oder Einzelcoachings tauchen wir tiefer in Lebens-, Beziehungs- oder Berufsthemen ein – reflektieren, wachsen, denken gemeinsam weiter.</p>
+      <a href="mindcircle.html" class="card-link">Mehr erfahren →</a>
+    </div>
+    <div class="card">
+      <p class="card-label">Rauchfrei Box</p>
+      <h3>Aufhören auf deine Art</h3>
+      <p class="card-tag">Kein Kurs. Kein Pflaster.</p>
+      <p>Die Rauchfrei Box ist ein physisches Werkzeug für Menschen die alleine aufhören wollen – aber diesmal wirklich vorbereitet. Mit Unterlagen, Notfallkoffer und einem persönlichen Gespräch mit mir.</p>
+      <a href="https://walterpapai.github.io/rauchfrei-box/" target="_blank" class="card-link">Zur Rauchfrei Box →</a>
+    </div>
+  </div>
+</section>
+
+<section class="feature" id="impulscafe">
+  <div class="feature-img">
+    <img src="cafe-group.jpg" alt="ImpulsCafé"/>
+  </div>
+  <div class="feature-text">
+    <p class="sec-label">ImpulsCafé</p>
+    <h2>Wo echte Begegnung entsteht</h2>
+    <p>Mehr als ein gutes Gespräch: ein Raum der dich weiterbringt. Für Menschen die sich früh neue Perspektiven holen – professionell begleitet, aber ganz im echten Leben.</p>
+    <p>Du kannst zuhören, dich einbringen oder ein eigenes Thema mitbringen. Ich begleite die Runde und sorge für einen geschützten Rahmen – ohne Druck, ohne Bewertung.</p>
+    <ul class="feat-list">
+      <li>Offene, wertschätzende Runde</li>
+      <li>Max. 20 Teilnehmer:innen</li>
+      <li>Dauer: ca. 2–3 Stunden</li>
+      <li>Wechselnde Cafés in Würzburg</li>
+      <li>Getränke & Speisen direkt über das Café</li>
+    </ul>
+    <a href="impulscafe.html" class="btn btn-p" style="width:fit-content;">Nächste Session anfragen</a>
+  </div>
+</section>
+
+<section class="mindcircle" id="mindcircle">
+  <div class="mc-text">
+    <p class="sec-label">MindCircle</p>
+    <h2>Tiefer gehen wenn du bereit bist</h2>
+    <p>Der MindCircle ist dein Raum für echten Fokus und Entwicklung. In kleinen Gruppen oder Einzelcoachings tauchen wir tiefer ein – in Lebens-, Beziehungs- oder Berufsthemen.</p>
+    <p>Nicht als Programm das du durchhalten musst – sondern als Begleitung die sich anpasst wo du gerade stehst.</p>
+    <a href="mindcircle.html" class="btn btn-p" style="width:fit-content; margin-top:1.5rem;">MindCircle anfragen</a>
+  </div>
+  <div class="mc-img">
+    <img src="mindcircle.jpg" alt="MindCircle"/>
+  </div>
+</section>
+
+<section class="box-teaser">
+  <div class="bt-text">
+    <p class="sec-label">Rauchfrei Box</p>
+    <h2>Damit dein nächster Versuch nicht wieder im Rückfall endet</h2>
+    <p>Kein Kurs. Kein Pflaster. Das was dir wirklich hilft aufzuhören – auf deine Art. Jetzt zum Einführungspreis von 69 € bis 15. August 2026.</p>
+    <a href="https://walterpapai.github.io/rauchfrei-box/" target="_blank" class="btn btn-p" style="width:fit-content;">Zur Rauchfrei Box →</a>
+  </div>
+  <div class="bt-img">
+    <img src="box.png" alt="Rauchfrei Box"/>
+  </div>
+</section>
+
+<section class="ueber-wrap" id="ueber">
+  <div class="ueber">
+    <div class="ueber-img">
+      <img src="walter.png" alt="Walter Papai"/>
+    </div>
+    <div class="ueber-text">
+      <p class="sec-label">Über mich</p>
+      <h2>Hallo, ich bin Walter Papai</h2>
+      <p>Zertifizierter Rauchfrei-Trainer (IFT), Focusing-Therapeut (DFI) und seit über 12 Jahren in der Begleitung von Menschen tätig.</p>
+      <p class="quote">Ich gebe keine Ratschläge aus der Theorie. Was ich begleite habe ich in ähnlicher Weise selbst erfahren.</p>
+      <p>Meine Arbeit ist direkt, ehrlich und auf Augenhöhe. Kein Programm das du durchhalten musst. Nur echte Begleitung – wenn du sie brauchst.</p>
+      <a href="ueber-mich.html" class="btn btn-p" style="margin-top:1.5rem; width:fit-content;">Mehr über mich</a>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <p class="sec-label" style="text-align:center;">Kontakt</p>
+  <h2>Meld dich einfach bei mir</h2>
+  <p class="kontakt-sub">Ob Frage, Buchung oder ein kurzes Gespräch – ich bin da.</p>
+  <div class="k-grid">
+    <div class="k-item"><p>WhatsApp & Telefon</p><a href="tel:+491726654461">0172 6654461</a></div>
+    <div class="k-item"><p>E-Mail</p><a href="mailto:walter@soul-sessions.de">walter@soul-sessions.de</a></div>
+    <div class="k-item"><p>Praxis Würzburg</p><p>Spitalgasse 15, 97082 Würzburg</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-brand">
+    <img src="logo.png" alt="Soul Sessions" class="f-logo"/>
+    <p>Echte Impulse für Herz, Verstand und Leben.<br>Würzburg & online.</p>
+  </div>
+  <div class="f-col">
+    <h4>Angebote</h4>
+    <ul>
+      <li><a href="impulscafe.html">ImpulsCafé</a></li>
+      <li><a href="mindcircle.html">MindCircle</a></li>
+      <li><a href="https://walterpapai.github.io/rauchfrei-box/" target="_blank">Rauchfrei Box</a></li>
+    </ul>
+  </div>
+  <div class="f-col">
+    <h4>Kontakt</h4>
+    <ul>
+      <li><a href="tel:+491726654461">0172 6654461</a></li>
+      <li><a href="mailto:walter@soul-sessions.de">walter@soul-sessions.de</a></li>
+      <li><a href="ueber-mich.html">Über mich</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="f-bottom">
+  <span>© 2026 Walter Papai · Soul Sessions · Würzburg</span>
+  <span><a href="#impressum">Impressum</a> &nbsp;|&nbsp; <a href="#datenschutz">Datenschutz</a></span>
+</div>
+
+<div class="legal" id="impressum">
+  <h3>Impressum</h3>
+  <p>Angaben gemäß § 5 TMG<br><br>Walter Papai<br>Meisnerstraße 21<br>97250 Erlabrunn<br><br>Praxisanschrift: Spitalgasse 15, 97082 Würzburg<br><br>Telefon: 0172 6654461<br>E-Mail: walter@soul-sessions.de<br><br>Zertifizierter Rauchfrei-Trainer (IFT Mental Health Solutions GmbH, München)<br>Zertifizierter Focusing-Therapeut (DFI – Deutsches Focusing Institut, Würzburg)</p>
+  <h3>Haftungsausschluss</h3>
+  <p>Die Inhalte dieser Webseite wurden mit größter Sorgfalt erstellt. Die Angebote ersetzen keine medizinische oder therapeutische Behandlung.</p>
+  <h3 id="datenschutz">Datenschutzerklärung</h3>
+  <p><strong>Verantwortlicher:</strong> Walter Papai, Meisnerstraße 21, 97250 Erlabrunn, walter@soul-sessions.de</p>
+  <p><strong>Datenerhebung:</strong> Diese Webseite erhebt keine Daten automatisch. Kontaktdaten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b und f DSGVO.</p>
+  <p><strong>Ihre Rechte:</strong> Auskunft, Berichtigung, Löschung. Kontakt: walter@soul-sessions.de</p>
+  <p><strong>Beschwerderecht:</strong> BayLDA, Promenade 27, 91522 Ansbach.</p>
+</div>
+
+</body>
+</html>
