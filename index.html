@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Soul Sessions – Walter Papai | Coaching & Begleitung Würzburg</title>
-  <meta name="description" content="ImpulsCafé, MindCircle und Rauchfrei Box – echte Impulse für Herz, Verstand und Leben. Professionelle Begleitung von Walter Papai in Würzburg."/>
-  <meta name="keywords" content="Coaching Würzburg, Rauchfrei, ImpulsCafé, MindCircle, Focusing Therapeut, Walter Papai"/>
-  <meta property="og:title" content="Soul Sessions – Walter Papai | Coaching & Begleitung Würzburg"/>
-  <meta property="og:description" content="ImpulsCafé, MindCircle und Rauchfrei Box – echte Impulse für Herz, Verstand und Leben. Professionelle Begleitung von Walter Papai in Würzburg."/>
+  <title>Betriebliche Suchtbegleitung – Soul Sessions | Walter Papai, Würzburg</title>
+  <meta name="description" content="Eine Anlaufstelle im Betrieb für Mitarbeitende und Angehörige – vertraulich, von außen, ohne Umwege. Suchtbegleitung, Weitervermittlung, Schulung für Führungskräfte und Rauchfrei-Seminare von Walter Papai."/>
+  <meta name="keywords" content="Betriebliche Suchtbegleitung, Suchtprävention Unternehmen, Sucht am Arbeitsplatz, Rauchfrei Seminar Betrieb, Betriebliches Gesundheitsmanagement, Walter Papai, Soul Sessions"/>
+  <meta property="og:title" content="Betriebliche Suchtbegleitung – Soul Sessions | Walter Papai"/>
+  <meta property="og:description" content="Eine Anlaufstelle im Betrieb für Mitarbeitende und Angehörige – vertraulich, von außen, ohne Umwege."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://www.soul-sessions.de/"/>
-  <meta property="og:image" content="https://www.soul-sessions.de/box.png"/>
+  <meta property="og:image" content="https://www.soul-sessions.de/walter.png"/>
   <link rel="canonical" href="https://www.soul-sessions.de/"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Soul Sessions – Walter Papai | Coaching & Begleitung Würzburg"/>
-  <meta name="twitter:description" content="ImpulsCafé, MindCircle und Rauchfrei Box – echte Impulse für Herz, Verstand und Leben. Professionelle Begleitung von Walter Papai in Würzburg."/>
-  <meta name="twitter:image" content="https://www.soul-sessions.de/box.png"/>
-    <meta name="google-site-verification" content="USe1RT8346NHNxFqJf_wzzZip2QtU2usiUHe36dE9P4"/>
+  <meta name="twitter:title" content="Betriebliche Suchtbegleitung – Soul Sessions | Walter Papai"/>
+  <meta name="twitter:description" content="Eine Anlaufstelle im Betrieb für Mitarbeitende und Angehörige – vertraulich, von außen, ohne Umwege."/>
+  <meta name="twitter:image" content="https://www.soul-sessions.de/walter.png"/>
+  <meta name="google-site-verification" content="USe1RT8346NHNxFqJf_wzzZip2QtU2usiUHe36dE9P4"/>
   <meta name="robots" content="index, follow"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,76 +35,120 @@
     .nav-links a:hover { color: var(--terra); }
     .nav-cta { background: var(--terra); color: white !important; padding: 0.45rem 1.1rem; border-radius: 4px; font-family: Arial, sans-serif; font-size: 0.82rem; text-decoration: none; }
 
-    .hero { min-height: 88vh; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
-    .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 6rem 4rem 6rem 6rem; }
-    .eyebrow { font-family: Arial, sans-serif; font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--terra); margin-bottom: 1.5rem; }
-    .hero h1 { font-size: clamp(2.6rem, 4vw, 3.8rem); line-height: 1.08; font-weight: normal; margin-bottom: 1.5rem; }
-    .hero h1 em { color: var(--terra); font-style: normal; }
-    .hero-sub { font-family: Arial, sans-serif; font-size: 1rem; color: var(--muted); line-height: 1.75; margin-bottom: 2.5rem; max-width: 400px; }
-    .btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn { padding: 0.8rem 1.8rem; border-radius: 4px; text-decoration: none; font-family: Arial, sans-serif; font-size: 0.87rem; transition: all 0.2s; display: inline-block; }
+    .btn { padding: 0.85rem 1.9rem; border-radius: 4px; text-decoration: none; font-family: Arial, sans-serif; font-size: 0.9rem; transition: all 0.2s; display: inline-block; }
     .btn-p { background: var(--terra); color: white; }
     .btn-p:hover { background: var(--terra-light); }
     .btn-g { border: 1px solid var(--border); color: var(--dark); }
     .btn-g:hover { border-color: var(--terra); color: var(--terra); }
-    .hero-right { position: relative; overflow: hidden; }
-    .hero-right img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.88); }
-    .hero-fade { position: absolute; inset: 0; background: linear-gradient(to right, var(--white) 0%, transparent 20%); }
+    .sec-label { font-family: Arial, sans-serif; font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.9rem; }
+    .sec-title { font-size: clamp(1.7rem, 2.5vw, 2.2rem); font-weight: normal; line-height: 1.2; margin-bottom: 1.2rem; }
 
-    .collage-strip { width: 100%; overflow: hidden; max-height: 220px; }
-    .collage-strip img { width: 100%; height: 220px; object-fit: cover; object-position: center 30%; }
+    /* HERO */
+    .hero { position: relative; background: var(--cream); padding: 8rem 3rem 7rem 6rem; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; width: 560px; height: 560px; border-radius: 50%; background: rgba(196,113,74,0.14); top: -230px; right: -120px; }
+    .hero::after { content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; background: rgba(196,113,74,0.09); bottom: -120px; right: 220px; }
+    .hero-inner { position: relative; z-index: 2; max-width: 820px; }
+    .hero h1 { font-size: clamp(2.6rem, 5vw, 4rem); line-height: 1.05; font-weight: normal; margin-bottom: 1.6rem; }
+    .hero-rule { width: 90px; height: 4px; background: var(--terra); margin-bottom: 1.6rem; }
+    .hero-sub { font-family: Arial, sans-serif; font-size: 1.08rem; color: var(--muted); line-height: 1.8; max-width: 560px; margin-bottom: 2.6rem; }
+    .btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-    .angebote { padding: 6rem 3rem; background: var(--cream); }
-    .sec-label { font-family: Arial, sans-serif; font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.8rem; }
-    .sec-title { font-size: clamp(1.7rem, 2.5vw, 2.2rem); font-weight: normal; margin-bottom: 3.5rem; line-height: 1.2; }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; max-width: 1100px; }
-    .card { background: var(--white); border-radius: 6px; padding: 2.5rem 2rem; border: 1px solid var(--border); display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.2s; }
-    .card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-2px); }
-    .card-label { font-family: Arial, sans-serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.8rem; }
-    .card h3 { font-size: 1.3rem; font-weight: normal; margin-bottom: 0.5rem; line-height: 1.2; }
-    .card-tag { font-family: Arial, sans-serif; font-size: 0.78rem; color: var(--terra); font-style: italic; margin-bottom: 1rem; }
-    .card p { font-family: Arial, sans-serif; font-size: 0.87rem; color: var(--muted); line-height: 1.7; flex: 1; margin-bottom: 1.8rem; }
-    .card-link { font-family: Arial, sans-serif; font-size: 0.82rem; color: var(--terra); text-decoration: none; border-bottom: 1px solid var(--terra); padding-bottom: 1px; width: fit-content; }
+    /* NUTZEN */
+    .nutzen { padding: 6rem 3rem; max-width: 1080px; margin: 0 auto; }
+    .nutzen-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.2rem 4rem; margin-top: 3rem; }
+    .n-item { display: grid; grid-template-columns: 54px 1fr; gap: 1.4rem; }
+    .n-num { font-family: Arial, sans-serif; font-size: 1.5rem; color: var(--terra); line-height: 1.1; border-top: 3px solid var(--terra); padding-top: 0.7rem; }
+    .n-item h3 { font-size: 1.15rem; font-weight: normal; margin-bottom: 0.5rem; line-height: 1.3; }
+    .n-item p { font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
 
-    .feature { display: grid; grid-template-columns: 1fr 1fr; min-height: 540px; }
-    .feature-img { overflow: hidden; }
-    .feature-img img { width: 100%; height: 100%; object-fit: cover; }
-    .feature-text { padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center; }
-    .feature-text h2 { font-size: 1.9rem; font-weight: normal; margin-bottom: 1.5rem; line-height: 1.2; }
-    .feature-text p { font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
-    .feat-list { list-style: none; margin: 1rem 0 2rem; }
-    .feat-list li { font-family: Arial, sans-serif; font-size: 0.87rem; color: var(--muted); padding: 0.35rem 0 0.35rem 1.2rem; position: relative; }
-    .feat-list li::before { content: '·'; position: absolute; left: 0; color: var(--terra); font-size: 1.2rem; line-height: 1; }
+    /* ZITAT */
+    .zitat { background: var(--dark); color: white; padding: 6rem 3rem; }
+    .zitat-inner { max-width: 820px; margin: 0 auto; text-align: center; }
+    .zitat blockquote { font-size: clamp(1.3rem, 2.3vw, 1.75rem); line-height: 1.55; font-style: italic; margin-bottom: 1.8rem; }
+    .zitat cite { font-family: Arial, sans-serif; font-style: normal; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terra); }
 
-    .mindcircle { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
-    .mc-text { padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center; background: var(--cream); }
-    .mc-text h2 { font-size: 1.9rem; font-weight: normal; margin-bottom: 1.5rem; line-height: 1.2; }
-    .mc-text p { font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
-    .mc-img { overflow: hidden; }
-    .mc-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    /* MATERIAL */
+    .material { padding: 5rem 3rem; max-width: 1080px; margin: 0 auto; }
+    .mat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem; }
+    .mat { border-left: 3px solid var(--terra); padding: 0.4rem 0 0.4rem 1.5rem; }
+    .mat h3 { font-size: 1.05rem; font-weight: normal; margin-bottom: 0.5rem; }
+    .mat p { font-family: Arial, sans-serif; font-size: 0.88rem; color: var(--muted); line-height: 1.75; margin-bottom: 0.8rem; }
+    .mat a { font-family: Arial, sans-serif; font-size: 0.85rem; color: var(--terra); text-decoration: none; border-bottom: 1px solid var(--terra); padding-bottom: 1px; }
 
-    .box-teaser { display: grid; grid-template-columns: 1fr 1fr; min-height: 460px; }
-    .bt-text { background: var(--dark); color: white; padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center; }
-    .bt-text .sec-label { color: var(--terra); }
-    .bt-text h2 { font-size: 1.9rem; font-weight: normal; margin-bottom: 1.5rem; line-height: 1.2; }
-    .bt-text p { font-family: Arial, sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 2rem; }
+    /* LÜCKE */
+    .luecke { padding: 6rem 3rem; max-width: 1040px; margin: 0 auto; background: var(--cream); max-width: none; }
+    .luecke-inner { max-width: 1040px; margin: 0 auto; }
+    .luecke p { font-family: Arial, sans-serif; font-size: 1rem; color: var(--muted); line-height: 1.9; max-width: 760px; margin-bottom: 1.2rem; }
+    .vergleich { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+    .v-box { border: 1px solid var(--border); border-radius: 6px; padding: 2rem 1.8rem; border-left: 5px solid var(--muted); }
+    .v-box.aktiv { border-left-color: var(--terra); background: var(--cream); }
+    .v-label { font-family: Arial, sans-serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.9rem; }
+    .v-box.aktiv .v-label { color: var(--terra); }
+    .v-weg { font-family: Arial, sans-serif; font-size: 0.87rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.4rem; }
+    .v-dauer { font-size: 2rem; color: var(--muted); }
+    .v-box.aktiv .v-dauer { color: var(--terra); }
+
+    /* LEISTUNGEN */
+    .leistungen { background: var(--white); padding: 6rem 3rem; }
+    .leistungen-inner { max-width: 1100px; margin: 0 auto; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-top: 3rem; }
+    .card { background: var(--white); border-radius: 6px; padding: 2.2rem 1.9rem; border: 1px solid var(--border); transition: box-shadow 0.2s, transform 0.2s; }
+    .card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.07); transform: translateY(-2px); }
+    .card-dot { width: 10px; height: 10px; background: var(--terra); border-radius: 50%; margin-bottom: 1.1rem; }
+    .card h3 { font-size: 1.12rem; font-weight: normal; margin-bottom: 0.6rem; line-height: 1.25; }
+    .card p { font-family: Arial, sans-serif; font-size: 0.87rem; color: var(--muted); line-height: 1.7; }
+    .leistungen-fuss { font-family: Arial, sans-serif; font-size: 0.92rem; color: var(--muted); margin-top: 2.5rem; line-height: 1.8; }
+
+    /* FÜR WEN */
+    .fuerwen { padding: 6rem 3rem; max-width: 1100px; margin: 0 auto; }
+    .wen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 2.5rem; }
+    .wen h3 { font-size: 1.15rem; font-weight: normal; margin-bottom: 0.7rem; }
+    .wen p { font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
+    .wen-strich { width: 44px; height: 3px; background: var(--terra); margin-bottom: 1.1rem; }
+
+    /* ABLAUF */
+    .ablauf { background: var(--cream); padding: 6rem 3rem; }
+    .schritt { background: transparent !important; border: none !important; padding: 0 !important; border-top: 3px solid var(--terra) !important; padding-top: 1.2rem !important; }
+    .ablauf-inner { max-width: 1100px; margin: 0 auto; }
+    .schritte { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+    .schritt { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 2.2rem 1.9rem; }
+    .schritt-num { font-family: Arial, sans-serif; font-size: 2rem; font-weight: bold; color: var(--terra); opacity: 0.3; margin-bottom: 0.6rem; }
+    .schritt h3 { font-size: 1.05rem; font-weight: normal; margin-bottom: 0.6rem; }
+    .schritt p { font-family: Arial, sans-serif; font-size: 0.87rem; color: var(--muted); line-height: 1.75; }
+
+    /* VERTRAULICHKEIT */
+    .vertraulich { background: var(--dark); color: white; padding: 6rem 3rem; }
+    .vertraulich-inner { max-width: 900px; margin: 0 auto; }
+    .vertraulich .sec-label { color: var(--terra); }
+    .vertraulich h2 { font-size: clamp(1.7rem, 2.5vw, 2.2rem); font-weight: normal; margin-bottom: 2rem; line-height: 1.2; }
+    .v-list { list-style: none; }
+    .v-list li { font-family: Arial, sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.78); padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.12); display: flex; gap: 1.1rem; line-height: 1.75; }
+    .v-list li:last-child { border-bottom: none; }
+    .v-dot { width: 8px; height: 8px; background: var(--terra); border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+
+    /* ÜBER MICH */
+    .ueber-wrap { padding: 6rem 3rem; }
+    .ueber { display: grid; grid-template-columns: 260px 1fr; gap: 4rem; max-width: 980px; margin: 0 auto; align-items: center; }
+    .ueber-img { border-radius: 6px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .ueber-img img { width: 100%; display: block; }
+    .ueber-text p { font-family: Arial, sans-serif; font-size: 0.93rem; color: var(--muted); line-height: 1.85; margin-bottom: 1rem; }
+    .quote { font-family: 'Georgia', serif; font-style: italic; font-size: 1.05rem; color: var(--dark) !important; border-left: 3px solid var(--terra); padding-left: 1.1rem; margin: 1.6rem 0 !important; }
+
+    /* BOX-TEASER */
+    .box-teaser { display: grid; grid-template-columns: 1fr 1fr; min-height: 420px; }
+    .bt-text { background: var(--cream); padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center; }
+    .bt-text h2 { font-size: 1.8rem; font-weight: normal; margin-bottom: 1.2rem; line-height: 1.25; }
+    .bt-text p { font-family: Arial, sans-serif; font-size: 0.92rem; color: var(--muted); line-height: 1.8; margin-bottom: 2rem; }
     .bt-img { overflow: hidden; }
     .bt-img img { width: 100%; height: 100%; object-fit: cover; }
 
-    .ueber-wrap { padding: 6rem 3rem; background: var(--cream); }
-    .ueber { display: grid; grid-template-columns: 340px 1fr; gap: 5rem; max-width: 1000px; margin: 0 auto; align-items: center; }
-    .ueber-img { border-radius: 6px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
-    .ueber-img img { width: 100%; display: block; }
-    .ueber-text h2 { font-size: 1.9rem; font-weight: normal; margin-bottom: 1.2rem; }
-    .ueber-text p { font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
-    .quote { font-style: italic; font-size: 0.97rem; color: var(--dark) !important; border-left: 3px solid var(--terra); padding-left: 1rem; margin: 1.5rem 0 !important; }
-
-    .kontakt { padding: 5rem 3rem; text-align: center; }
-    .kontakt h2 { font-size: 2rem; font-weight: normal; margin-bottom: 0.5rem; }
-    .kontakt-sub { font-family: Arial, sans-serif; color: var(--muted); font-size: 0.92rem; margin-bottom: 2.5rem; }
+    /* KONTAKT */
+    .kontakt { padding: 6rem 3rem; text-align: center; }
+    .kontakt h2 { font-size: 2rem; font-weight: normal; margin-bottom: 0.6rem; }
+    .kontakt-sub { font-family: Arial, sans-serif; color: var(--muted); font-size: 0.95rem; margin-bottom: 2.8rem; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.8; }
     .k-grid { display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; }
     .k-item p:first-child { font-family: Arial, sans-serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.4rem; }
-    .k-item a, .k-item p:last-child { font-family: Arial, sans-serif; font-size: 0.92rem; color: var(--dark); text-decoration: none; }
+    .k-item a, .k-item p:last-child { font-family: Arial, sans-serif; font-size: 0.95rem; color: var(--dark); text-decoration: none; }
 
     footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 3rem; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
     .f-logo { height: 34px; filter: brightness(0) invert(1); opacity: 0.75; margin-bottom: 1rem; }
@@ -116,23 +160,25 @@
     .f-col ul li a:hover { color: white; }
     .f-bottom { background: var(--dark); border-top: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 3rem; font-family: Arial, sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.3); display: flex; justify-content: space-between; }
     .f-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
-
     .legal { background: var(--dark); color: rgba(255,255,255,0.5); padding: 2rem 3rem; font-family: Arial, sans-serif; font-size: 0.78rem; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.05); }
     .legal h3 { color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-bottom: 0.5rem; margin-top: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
 
     @media (max-width: 900px) {
       nav { padding: 0.75rem 1.5rem; }
       .nav-links { display: none; }
-      .hero { grid-template-columns: 1fr; }
-      .hero-right { min-height: 260px; }
-      .hero-left { padding: 4rem 2rem; }
-      .angebote { padding: 4rem 2rem; }
-      .cards { grid-template-columns: 1fr; }
-      .feature, .mindcircle, .box-teaser { grid-template-columns: 1fr; }
-      .feature-img, .mc-img, .bt-img { min-height: 260px; order: -1; }
-      .feature-text, .mc-text, .bt-text { padding: 3rem 2rem; }
-      .ueber-wrap { padding: 4rem 2rem; }
+      .hero { padding: 4.5rem 2rem; }
+      .hero::before { width: 320px; height: 320px; top: -150px; right: -110px; }
+      .hero::after { display: none; }
+      .luecke, .fuerwen, .ueber-wrap, .kontakt { padding: 4rem 2rem; }
+      .leistungen, .ablauf, .vertraulich { padding: 4rem 2rem; }
+      .vergleich, .cards, .wen-grid, .schritte, .nutzen-grid, .mat-grid { grid-template-columns: 1fr; }
+      .nutzen, .material { padding: 4rem 2rem; }
+      .zitat { padding: 4rem 2rem; }
       .ueber { grid-template-columns: 1fr; gap: 2.5rem; }
+      .ueber-img { max-width: 240px; }
+      .box-teaser { grid-template-columns: 1fr; }
+      .bt-img { min-height: 260px; order: -1; }
+      .bt-text { padding: 3rem 2rem; }
       footer { grid-template-columns: 1fr; padding: 3rem 2rem; }
       .f-bottom { padding: 1.2rem 2rem; flex-direction: column; gap: 0.5rem; }
       .legal { padding: 2rem; }
@@ -144,103 +190,216 @@
 <nav>
   <a href="index.html" class="nav-logo"><img src="logo.png" alt="Soul Sessions"/></a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#angebote">SoulSessions</a></li>
-    <li><a href="impulscafe.html">ImpulsCafé</a></li>
-    <li><a href="mindcircle.html">MindCircle</a></li>
-    <li><a href="https://walterpapai.github.io/rauchfrei-box/" target="_blank">Rauchfrei-Box</a></li>
+    <li><a href="#unternehmen">Für Unternehmen</a></li>
+    <li><a href="#ablauf">Ablauf</a></li>
+    <li><a href="https://walterpapai.github.io/rauchfrei-box/" target="_blank">Rauchfrei Box</a></li>
     <li><a href="ueber-mich.html">Über mich</a></li>
     <li><a href="kontakt.html">Kontakt</a></li>
   </ul>
-  <a href="impulscafe.html" class="nav-cta">zum ImpulsCafé</a>
+  <a href="kontakt.html" class="nav-cta">Gespräch vereinbaren</a>
 </nav>
 
 <section class="hero">
-  <div class="hero-left">
-    <p class="eyebrow">Soul Sessions · Walter Papai · Würzburg</p>
-    <h1>Wo Gespräche<br><em>bewegen</em></h1>
-    <p class="hero-sub">Echte Impulse für Herz, Verstand und Leben – professionell begleitet, aber ganz im echten Leben.</p>
+  <div class="hero-inner">
+    <p class="sec-label">Betriebliche Suchtbegleitung</p>
+    <h1>Damit gute Leute<br>an Bord bleiben</h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">Eine Anlaufstelle in Ihrem Betrieb – für Mitarbeitende, für Angehörige und für alle, die Verantwortung für ein Team tragen. Vertraulich, von außen, ohne Umwege.</p>
     <div class="btns">
-      <a href="impulscafe.html" class="btn btn-p">zum ImpulsCafé</a>
-      <a href="#angebote" class="btn btn-g">Alle Angebote</a>
-    </div>
-  </div>
-  <div class="hero-right">
-    <img src="cafe-talk.jpg" alt="Menschen im Gespräch"/>
-    <div class="hero-fade"></div>
-  </div>
-</section>
-
-<div class="collage-strip">
-  <img src="collage.png" alt="ImpulsCafé Impressionen"/>
-</div>
-
-<section class="angebote" id="angebote">
-  <p class="sec-label">Was ich anbiete</p>
-  <h2 class="sec-title">Drei Wege – ein Ziel:<br>mehr Klarheit im Leben</h2>
-  <div class="cards">
-    <div class="card">
-      <p class="card-label">ImpulsCafé</p>
-      <h3>Café-Talks in deiner Stadt</h3>
-      <p class="card-tag">Dein Café für frischen Input.</p>
-      <p>Im ImpulsCafé triffst du Menschen die sich mehr Klarheit und neue Perspektiven wünschen – entspannt bei Kaffee oder einem Drink. Du kannst zuhören, dich einbringen oder ein eigenes Thema mitbringen. Alles darf, nichts muss.</p>
-      <a href="impulscafe.html" class="card-link">Termine und Orte →</a>
-    </div>
-    <div class="card">
-      <p class="card-label">MindCircle</p>
-      <h3>Tiefer gehen wenn du bereit bist</h3>
-      <p class="card-tag">Wo Gespräche Wege eröffnen.</p>
-      <p>Der MindCircle ist dein Raum für Fokus und Entwicklung. In kleinen Gruppen oder Einzelcoachings tauchen wir tiefer in Lebens-, Beziehungs- oder Berufsthemen ein – reflektieren, wachsen, denken gemeinsam weiter.</p>
-      <a href="mindcircle.html" class="card-link">Mehr erfahren →</a>
-    </div>
-    <div class="card">
-      <p class="card-label">Rauchfrei Box</p>
-      <h3>Aufhören auf deine Art</h3>
-      <p class="card-tag">Kein Kurs. Kein Pflaster.</p>
-      <p>Die Rauchfrei Box ist ein physisches Werkzeug für Menschen die alleine aufhören wollen – aber diesmal wirklich vorbereitet. Mit Unterlagen, Notfallkoffer und einem persönlichen Gespräch mit mir.</p>
-      <a href="https://walterpapai.github.io/rauchfrei-box/" target="_blank" class="card-link">Zur Rauchfrei Box →</a>
+      <a href="#unternehmen" class="btn btn-p">Für Unternehmen</a>
+      <a href="https://walterpapai.github.io/rauchfrei-box/" target="_blank" class="btn btn-g">Rauchfrei Box ansehen</a>
     </div>
   </div>
 </section>
 
-<section class="feature" id="impulscafe">
-  <div class="feature-img">
-    <img src="cafe-group.jpg" alt="ImpulsCafé"/>
+<section class="nutzen">
+  <p class="sec-label">Was Ihr Betrieb davon hat</p>
+  <h2 class="sec-title">Warum Unternehmen dafür Geld<br>in die Hand nehmen</h2>
+  <div class="nutzen-grid">
+    <div class="n-item">
+      <div class="n-num">01</div>
+      <div>
+        <h3>Gute Leute bleiben</h3>
+        <p>Eine eingearbeitete Fachkraft zu halten ist günstiger, als eine neue zu suchen. Wer rechtzeitig Unterstützung bekommt, fällt seltener aus und kündigt seltener. Schon ein einziger Mensch, der bleibt, trägt die Kosten eines ganzen Jahres.</p>
+      </div>
+    </div>
+    <div class="n-item">
+      <div class="n-num">02</div>
+      <div>
+        <h3>Weniger Risiko im Betrieb</h3>
+        <p>An der Maschine, am Steuer, in der Schicht: Sucht ist dort nicht nur ein Gesundheitsthema, sondern eine Frage von Sicherheit und Verantwortung. Je früher jemand Hilfe findet, desto seltener wird daraus ein Vorfall.</p>
+      </div>
+    </div>
+    <div class="n-item">
+      <div class="n-num">03</div>
+      <div>
+        <h3>Führungskräfte werden entlastet</h3>
+        <p>Die meisten ahnen etwas und tun nichts, aus Sorge, etwas falsch zu machen. Mit einer externen Stelle im Rücken wissen sie, wohin sie verweisen können, und müssen die Sache nicht allein entscheiden.</p>
+      </div>
+    </div>
+    <div class="n-item">
+      <div class="n-num">04</div>
+      <div>
+        <h3>Keine eigene Stelle nötig</h3>
+        <p>Viele Betriebe haben eine Betriebsvereinbarung zum Thema Sucht, aber niemanden, der sie mit Leben füllt. Statt dafür eine eigene Fachkraft einzustellen, bekommen Sie Erfahrung, Netzwerk und Außenperspektive als feste Begleitung.</p>
+      </div>
+    </div>
   </div>
-  <div class="feature-text">
-    <p class="sec-label">ImpulsCafé</p>
-    <h2>Wo echte Begegnung entsteht</h2>
-    <p>Mehr als ein gutes Gespräch: ein Raum der dich weiterbringt. Für Menschen die sich früh neue Perspektiven holen – professionell begleitet, aber ganz im echten Leben.</p>
-    <p>Du kannst zuhören, dich einbringen oder ein eigenes Thema mitbringen. Ich begleite die Runde und sorge für einen geschützten Rahmen – ohne Druck, ohne Bewertung.</p>
-    <ul class="feat-list">
-      <li>Offene, wertschätzende Runde</li>
-      <li>Max. 20 Teilnehmer:innen</li>
-      <li>Dauer: ca. 2–3 Stunden</li>
-      <li>Wechselnde Cafés in Würzburg</li>
-      <li>Getränke & Speisen direkt über das Café</li>
+</section>
+
+<section class="luecke">
+ <div class="luecke-inner">
+  <p class="sec-label">Die Lücke</p>
+  <h2 class="sec-title">Hilfe gibt es. Nur kommt sie selten an.</h2>
+  <p>Beratungsstellen, Kliniken, Selbsthilfegruppen, Therapie: Das Hilfesystem existiert, und es ist gut. Doch wer mitten in einer Sucht steckt oder mit der Sucht eines Angehörigen lebt, hat am wenigsten Kraft, sich das alles selbst zusammenzusuchen.</p>
+  <p>Herausfinden, wer zuständig ist. Anrufen. Auf einen Rückruf warten. Einen Termin bekommen. Bis dahin ist der Moment, in dem jemand bereit war, oft wieder vorbei.</p>
+
+  <div class="vergleich">
+    <div class="v-box">
+      <p class="v-label">Ohne Anlaufstelle im Betrieb</p>
+      <p class="v-weg">Entschluss → herausfinden, wer zuständig ist → anrufen → Mailbox → Rückruf → Termin</p>
+      <p class="v-dauer">oft Wochen</p>
+    </div>
+    <div class="v-box aktiv">
+      <p class="v-label">Mit Anlaufstelle im Betrieb</p>
+      <p class="v-weg">Entschluss → Gespräch</p>
+      <p class="v-dauer">noch heute</p>
+    </div>
+  </div>
+ </div>
+</section>
+
+<section class="zitat">
+  <div class="zitat-inner">
+    <blockquote>„Als ich nach einer Suchterkrankung an meinen Arbeitsplatz zurückkam, gab es dort niemanden, an den ich mich hätte wenden können. Also habe ich es für mich behalten."</blockquote>
+    <cite>Walter Papai</cite>
+  </div>
+</section>
+
+<section class="leistungen" id="unternehmen">
+  <div class="leistungen-inner">
+    <p class="sec-label">Für Unternehmen</p>
+    <h2 class="sec-title">Eine Stelle für alles, was Sucht<br>im Betrieb betrifft</h2>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-dot"></div>
+        <h3>Anlaufstelle für Mitarbeitende</h3>
+        <p>Erstgespräch, Orientierung, Begleitung. Ohne Antrag, ohne Wartezeit, ohne dass jemand im Betrieb davon erfährt.</p>
+      </div>
+      <div class="card">
+        <div class="card-dot"></div>
+        <h3>Ansprechpartner für Angehörige</h3>
+        <p>Auch wer selbst nicht betroffen ist, trägt oft schwer: der Partner, das Kind, die Eltern. Auch diese Mitarbeitenden können zu mir kommen.</p>
+      </div>
+      <div class="card">
+        <div class="card-dot"></div>
+        <h3>Weitervermittlung ins Hilfesystem</h3>
+        <p>Ich ersetze keine Therapie und keine Beratungsstelle. Ich arbeite mit ihnen zusammen und sorge dafür, dass Ihre Leute dort ankommen.</p>
+      </div>
+      <div class="card">
+        <div class="card-dot"></div>
+        <h3>Rückkehr nach einer Suchterkrankung</h3>
+        <p>Wenn jemand zurückkommt, sind alle unsicher. Was braucht die Person, was braucht das Team, wie gelingt die Wiedereingliederung.</p>
+      </div>
+      <div class="card">
+        <div class="card-dot"></div>
+        <h3>Schulung für Führungskräfte</h3>
+        <p>Für Führungskräfte, Betriebsräte und Teamverantwortliche: einen Verdacht ansprechen, den ersten Kontakt gestalten.</p>
+      </div>
+      <div class="card">
+        <div class="card-dot"></div>
+        <h3>Rauchfrei im Betrieb</h3>
+        <p>Rauchfrei-Seminare nach dem Programm des IFT, dazu die Rauchfrei Box für alle, die es ohne Kurs und ohne Arbeitszeit versuchen wollen.</p>
+      </div>
+    </div>
+
+    <p class="leistungen-fuss">Dazu sichtbare Präsenz im Betrieb: Infostände, Gesundheitstage und Vorträge.<br>
+    Als feste Langzeitbegleitung oder in einzelnen Bausteinen, gerne auch für kleinere Betriebe.<br>
+    Die Rauchfrei Box ist im Firmenangebot enthalten: Wer aufhören möchte, bekommt sie, ohne dass sie Ihnen einzeln berechnet wird.</p>
+  </div>
+</section>
+
+<section class="fuerwen">
+  <p class="sec-label">Für wen</p>
+  <h2 class="sec-title">Drei Gruppen, die sonst niemanden fragen</h2>
+  <div class="wen-grid">
+    <div class="wen">
+      <div class="wen-strich"></div>
+      <h3>Betroffene</h3>
+      <p>Menschen, die merken, dass etwas aus dem Ruder läuft, und die nicht wissen, wohin. Oft lange bevor es im Betrieb jemandem auffällt.</p>
+    </div>
+    <div class="wen">
+      <div class="wen-strich"></div>
+      <h3>Angehörige</h3>
+      <p>Mitarbeitende, die zu Hause mit der Sucht eines anderen leben. Sie fehlen seltener, aber sie tragen mit, und irgendwann zeigt sich das auch bei der Arbeit.</p>
+    </div>
+    <div class="wen">
+      <div class="wen-strich"></div>
+      <h3>Führungskräfte</h3>
+      <p>Wer eine Vermutung hat und nicht weiß, wie er sie anspricht. Oder wer jemanden im Team wieder aufnimmt, der lange weg war.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ablauf" id="ablauf">
+  <div class="ablauf-inner">
+    <p class="sec-label">Ablauf</p>
+    <h2 class="sec-title">Wie die Begleitung im Betrieb funktioniert</h2>
+    <div class="schritte">
+      <div class="schritt">
+        <div class="schritt-num">1</div>
+        <h3>Bekannt machen</h3>
+        <p>Zum Start stelle ich mich in Ihrem Betrieb vor, damit jede und jeder weiß, dass es diese Stelle gibt und wie man sie erreicht.</p>
+      </div>
+      <div class="schritt">
+        <div class="schritt-num">2</div>
+        <h3>Erreichbar sein</h3>
+        <p>Mitarbeitende melden sich direkt bei mir, nicht über die Personalabteilung. Ich bin von außen da, mit kurzen Wegen.</p>
+      </div>
+      <div class="schritt">
+        <div class="schritt-num">3</div>
+        <h3>Begleiten und vermitteln</h3>
+        <p>Je nach Anliegen begleite ich selbst oder vermittle weiter – und bleibe dran, bis jemand angekommen ist.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="vertraulich">
+  <div class="vertraulich-inner">
+    <p class="sec-label">Vertraulichkeit</p>
+    <h2>Was Ihr Unternehmen erfährt – und was nicht</h2>
+    <ul class="v-list">
+      <li><div class="v-dot"></div><span>Wer mit mir spricht, bleibt bei mir. Namen und Inhalte erfährt der Arbeitgeber nicht.</span></li>
+      <li><div class="v-dot"></div><span>Sie erhalten regelmäßig eine Auswertung – ausschließlich anonym, als Nutzungszahlen: wie viele Gespräche, wie viele Vermittlungen, wie viele Kontakte am Infostand.</span></li>
+      <li><div class="v-dot"></div><span>Bei kleinen Zahlen wird nicht nach Abteilung oder Standort aufgeschlüsselt, damit niemand rückschließen kann.</span></li>
+      <li><div class="v-dot"></div><span>Der Betriebsrat wird von Anfang an eingebunden. Ich kenne beide Seiten: Ich war selbst jahrelang Betriebsrat.</span></li>
     </ul>
-    <a href="impulscafe.html" class="btn btn-p" style="width:fit-content;">Nächste Session anfragen</a>
   </div>
 </section>
 
-<section class="mindcircle" id="mindcircle">
-  <div class="mc-text">
-    <p class="sec-label">MindCircle</p>
-    <h2>Tiefer gehen wenn du bereit bist</h2>
-    <p>Der MindCircle ist dein Raum für echten Fokus und Entwicklung. In kleinen Gruppen oder Einzelcoachings tauchen wir tiefer ein – in Lebens-, Beziehungs- oder Berufsthemen.</p>
-    <p>Nicht als Programm das du durchhalten musst – sondern als Begleitung die sich anpasst wo du gerade stehst.</p>
-    <a href="mindcircle.html" class="btn btn-p" style="width:fit-content; margin-top:1.5rem;">MindCircle anfragen</a>
-  </div>
-  <div class="mc-img">
-    <img src="mindcircle.jpg" alt="MindCircle"/>
+<section class="ueber-wrap">
+  <div class="ueber">
+    <div class="ueber-img">
+      <img src="walter.png" alt="Walter Papai"/>
+    </div>
+    <div class="ueber-text">
+      <p class="sec-label">Wer dahintersteht</p>
+      <h2 class="sec-title">Walter Papai</h2>
+      <p>17 Jahre Industrie, davon fünf Jahre im Betriebsrat. Ich kenne Produktion, Schichtbetrieb und Personalgespräche nicht aus Büchern, sondern von innen.</p>
+      <p>Heute bin ich zertifizierter Rauchfrei-Trainer (IFT) und Focusing-Therapeut (DFI). Am Berufsförderungswerk Nürnberg begleite ich Menschen nach langer Krankheit, auch nach Sucht, zurück in den Beruf.</p>
+      <p class="quote">Ich kenne Sucht nicht nur aus der Theorie.</p>
+      <a href="ueber-mich.html" class="btn btn-p" style="width:fit-content;">Mehr über mich</a>
+    </div>
   </div>
 </section>
 
 <section class="box-teaser">
   <div class="bt-text">
-    <p class="sec-label">Rauchfrei Box</p>
-    <h2>Damit dein nächster Versuch nicht wieder im Rückfall endet</h2>
-    <p>Kein Kurs. Kein Pflaster. Das was dir wirklich hilft aufzuhören – auf deine Art. Jetzt zum Einführungspreis von 69 € bis 15. August 2026.</p>
+    <p class="sec-label">Rauchfrei Box · auch einzeln</p>
+    <h2>Für alle, die es ohne Kurs versuchen wollen</h2>
+    <p>Kein Kurs, kein Pflaster, keine Termine: Unterlagen, ein Notfallkoffer für die schwierigen Momente und ein persönliches Gespräch mit mir. In betreuten Betrieben ist sie Teil des Angebots. Privat kann sie jede und jeder einzeln bestellen.</p>
     <a href="https://walterpapai.github.io/rauchfrei-box/" target="_blank" class="btn btn-p" style="width:fit-content;">Zur Rauchfrei Box →</a>
   </div>
   <div class="bt-img">
@@ -248,28 +407,29 @@
   </div>
 </section>
 
-<section class="ueber-wrap" id="ueber">
-  <div class="ueber">
-    <div class="ueber-img">
-      <img src="walter.png" alt="Walter Papai"/>
+<section class="material">
+  <p class="sec-label">Material &amp; Aktuelles</p>
+  <h2 class="sec-title">Zum Weiterlesen und Weitergeben</h2>
+  <div class="mat-grid">
+    <div class="mat">
+      <h3>Finanzierung der Suchtberatung 2026</h3>
+      <p>Die Deutsche Hauptstelle für Suchtfragen hat erhoben, wie es um die Beratungsstellen steht. Bei 76,9 Prozent ist die Finanzierung nicht kostendeckend oder ungeklärt. Für Betriebe heißt das: Die Wege werden länger, nicht kürzer.</p>
+      <a href="https://www.dhs.de/fileadmin/user_upload/pdf/dhs-stellungnahmen/2026-09-28-Bericht_Finanzierung_Suchtberatung.pdf" target="_blank" rel="noopener">Bericht der DHS als PDF</a>
     </div>
-    <div class="ueber-text">
-      <p class="sec-label">Über mich</p>
-      <h2>Hallo, ich bin Walter Papai</h2>
-      <p>Zertifizierter Rauchfrei-Trainer (IFT), Focusing-Therapeut (DFI) und seit über 12 Jahren in der Begleitung von Menschen tätig.</p>
-      <p class="quote">Ich gebe keine Ratschläge aus der Theorie. Was ich begleite habe ich in ähnlicher Weise selbst erfahren.</p>
-      <p>Meine Arbeit ist direkt, ehrlich und auf Augenhöhe. Kein Programm das du durchhalten musst. Nur echte Begleitung – wenn du sie brauchst.</p>
-      <a href="ueber-mich.html" class="btn btn-p" style="margin-top:1.5rem; width:fit-content;">Mehr über mich</a>
+    <div class="mat">
+      <h3>Was Rauchen ein Unternehmen kostet</h3>
+      <p>Eine kurze Übersicht für Personalverantwortliche: welche Kosten durch Rauchen im Betrieb entstehen und an welchen Stellen sich etwas bewegen lässt.</p>
+      <a href="mailto:walter@soul-sessions.de?subject=Uebersicht%20Kosten%20im%20Betrieb">Übersicht anfordern</a>
     </div>
   </div>
 </section>
 
 <section class="kontakt" id="kontakt">
-  <p class="sec-label" style="text-align:center;">Kontakt</p>
-  <h2>Meld dich einfach bei mir</h2>
-  <p class="kontakt-sub">Ob Frage, Buchung oder ein kurzes Gespräch – ich bin da.</p>
+  <p class="sec-label">Kontakt</p>
+  <h2>Lassen Sie uns sprechen</h2>
+  <p class="kontakt-sub">Ein erstes Gespräch kostet nichts und verpflichtet zu nichts. Danach wissen Sie, ob das zu Ihrem Betrieb passt.</p>
   <div class="k-grid">
-    <div class="k-item"><p>WhatsApp & Telefon</p><a href="tel:+491726654461">0172 6654461</a></div>
+    <div class="k-item"><p>Telefon &amp; WhatsApp</p><a href="tel:+491726654461">0172 6654461</a></div>
     <div class="k-item"><p>E-Mail</p><a href="mailto:walter@soul-sessions.de">walter@soul-sessions.de</a></div>
     <div class="k-item"><p>Praxis Würzburg</p><p>Spitalgasse 15, 97082 Würzburg</p></div>
   </div>
@@ -278,13 +438,13 @@
 <footer>
   <div class="f-brand">
     <img src="logo.png" alt="Soul Sessions" class="f-logo"/>
-    <p>Echte Impulse für Herz, Verstand und Leben.<br>Würzburg & online.</p>
+    <p>Betriebliche Suchtbegleitung.<br>Würzburg, bundesweit und online.</p>
   </div>
   <div class="f-col">
-    <h4>Angebote</h4>
+    <h4>Angebot</h4>
     <ul>
-      <li><a href="impulscafe.html">ImpulsCafé</a></li>
-      <li><a href="mindcircle.html">MindCircle</a></li>
+      <li><a href="#unternehmen">Für Unternehmen</a></li>
+      <li><a href="#ablauf">Ablauf</a></li>
       <li><a href="https://walterpapai.github.io/rauchfrei-box/" target="_blank">Rauchfrei Box</a></li>
     </ul>
   </div>
